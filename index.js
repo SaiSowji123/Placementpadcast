@@ -1,12 +1,15 @@
 import React from 'react';
-import "./styles.css";
+import "./styles.css"
 
-function Loader() {
+// Button component renders a custom button
+function Button({ text, onClick, disabled, style }) {
   return (
-    <div className='wrapper'>
-      <span className="loader"></span>
+    // Div container representing the button
+    <div onClick={onClick} className="custom-btn" disabled={disabled} style={style}>
+      {/* Button text */}
+      {text}
     </div>
-  )
+  );
 }
 
-export default Loader;
+export default Button;
